@@ -1,0 +1,5 @@
+.about {
+  @include section-size;
+  background-image: url("../assets/section2.svg");
+  transform: translateY(-2px);
+}

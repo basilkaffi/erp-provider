@@ -1,0 +1,5 @@
+.contact {
+  @include section-size;
+  background-image: url("../assets/section5.svg");
+  transform: translateY(-1px);
+}

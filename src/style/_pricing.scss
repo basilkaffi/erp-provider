@@ -1,0 +1,5 @@
+.pricing {
+  @include section-size;
+  background-image: url("../assets/section3.svg");
+  transform: translateY(-3px);
+}

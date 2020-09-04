@@ -1,0 +1,14 @@
+$primary-color: #4b6a9c;
+$secondary-color: #8fa2ca;
+$third-color: #a1ebff;
+$width: 100vw;
+$height: $width/1.78;
+
+@mixin section-size {
+  box-sizing: border-box;
+  margin: auto;
+  width: $width;
+  height: $height;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
