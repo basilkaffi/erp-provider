@@ -6,7 +6,7 @@ import { Navbar, Home, About, Pricing, Other, Contact } from "../components";
 function OnePage() {
   const [visible, setVisibility] = useState(false);
   const transitioning = () => {
-    if (window.pageYOffset > (window.innerHeight * 3) / 5) setVisibility(true);
+    if (window.pageYOffset > 100) setVisibility(true);
     else setVisibility(false);
   };
   useEffect(() => {
@@ -19,11 +19,11 @@ function OnePage() {
     <div className="one-page">
       <CSSTransition
         in={visible}
-        timeout={400}
+        timeout={300}
         unmountOnExit
         classNames="navbar-transition"
       >
-        <Navbar />
+        <Navbar fixed={true} />
       </CSSTransition>
       <Home />
       <About />

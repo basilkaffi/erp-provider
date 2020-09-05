@@ -3,7 +3,7 @@
   min-height: $height * 0.04;
   height: fit-content;
   background-color: white;
-  box-shadow: 0 0.2rem 0.2rem 0 rgba(160, 143, 143, 0.2);
+  box-shadow: 0 $size * 0.2 $size * 0.2 0 rgba(160, 143, 143, 0.2);
   align-items: center;
   padding: 0;
   margin: 0;
@@ -11,13 +11,14 @@
     color: $primary-color;
     padding: 0;
     margin: 0;
-    font-size: 1.7rem;
+    margin-left: $size;
+    font-size: $size * 1.6;
     font-weight: 500;
     cursor: pointer;
     transition: 400ms;
     img {
-      width: 2rem;
-      transform: translateY(-0.2rem);
+      width: $size * 2;
+      transform: translateY(-$size * 0.3);
     }
     .active {
       color: $primary-color;
@@ -27,9 +28,9 @@
   .nav-container {
     color: $primary-color;
     .nav-item {
-      font-size: 1.2rem;
+      font-size: $size;
       font-weight: 700;
-      margin: 0 0.7rem;
+      margin: 0 $size * 0.5;
       cursor: pointer;
       transition: 250ms;
       display: inline-block;
@@ -40,7 +41,7 @@
       &:after {
         display: block;
         content: "";
-        border-bottom: solid 3px $primary-color;
+        border-bottom: solid $size * 0.2 $primary-color;
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
       }
@@ -59,38 +60,21 @@
     }
   }
   .button {
-    margin-right: 1rem;
-    color: $secondary-color;
-    border: 0.15rem $secondary-color solid;
-    border-radius: 0.5rem;
-    width: 7rem;
-    height: 2.3rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
-    cursor: pointer;
-    background: linear-gradient(to right, $primary-color 50%, white 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all 200ms ease-out;
-    &:hover {
-      background-position: left bottom;
-      border: 0.15rem $primary-color solid;
-      color: white;
-    }
+    @include button-style;
+    margin: 0 $size * 2;
   }
 }
 .navbar-transition-enter {
-  transform: translateY(-4rem);
+  transform: translateY(-$height/4);
 }
 .navbar-transition-enter-active {
-  transform: translateY(0rem);
+  transform: translateY(0);
   transition: 300ms;
 }
 .navbar-transition-exit {
-  transform: translateY(0rem);
+  transform: translateY(0);
 }
 .navbar-transition-exit-active {
-  transform: translateY(-4rem);
-  transition: 100ms;
+  transform: translateY(-$height);
+  transition: 400ms;
 }

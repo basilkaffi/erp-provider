@@ -1,19 +1,40 @@
 import React from "react";
-import "./style/style.scss";
+import "./style/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
 import { OnePage, Login } from "./pages";
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
+  const routes = [
+    { path: "/login", name: "login", Component: Login },
+    { path: "/", name: "home", Component: OnePage },
+  ];
+  const AnimatedSwitch = withRouter(({ location }) => (
+    <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        timeout={300}
+        classNames="ease-in"
+        unmountOnExit
+      >
         <Switch>
-          <Route path="/login" render={(props) => <Login />} />
-          <Route path="/" render={(props) => <OnePage />} />
+          {routes.map(({ path, Component }, idx) => (
+            <Route path={path} key={idx} component={Component} />
+          ))}
         </Switch>
-      </Router>
-    </div>
+      </CSSTransition>
+    </TransitionGroup>
+  ));
+  return (
+    <Router>
+      <AnimatedSwitch />
+    </Router>
   );
 }
 

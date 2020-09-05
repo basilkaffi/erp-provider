@@ -1,8 +1,9 @@
-$primary-color: #4b6a9c;
-$secondary-color: #8fa2ca;
-$third-color: #a1ebff;
+$primary-color: #48466d;
+$secondary-color: #3d84a8;
+$third-color: #46cdcf;
 $width: 100vw;
 $height: $width/1.78;
+$size: $width/70;
 
 @mixin section-size {
   box-sizing: border-box;
@@ -11,4 +12,25 @@ $height: $width/1.78;
   height: $height;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@mixin button-style {
+  color: $secondary-color;
+  border: $size * 0.2 $secondary-color solid;
+  background: linear-gradient(to right, $primary-color 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 200ms ease-out;
+  border-radius: $size * 0.5;
+  width: $size * 6;
+  height: $size * 2;
+  font-size: $size;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-position: left bottom;
+    border: $size * 0.2 $primary-color solid;
+    color: white;
+  }
 }

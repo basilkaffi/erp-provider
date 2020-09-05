@@ -1,7 +1,7 @@
 import React from "react";
 
 function Pricing() {
-  return <div className="pricing" id="pricing"></div>;
+  return <section className="pricing" id="pricing"></section>;
 }
 
 export default Pricing;

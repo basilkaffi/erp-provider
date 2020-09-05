@@ -4,14 +4,18 @@ import { Navbar, Nav } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-scroll";
 
-function NavbarContainer() {
+function NavbarContainer(props) {
   const history = useHistory();
+  const navItems = ["about", "pricing", "more", "contact"];
   const gotoLogin = (e) => {
     e.preventDefault();
     history.push("/login");
   };
+  const fixed = () => {
+    return props.fixed === true ? "top" : null;
+  };
   return (
-    <Navbar fixed="top" sticky="top">
+    <Navbar fixed={fixed()}>
       <Navbar.Brand bsPrefix="logo">
         <img alt="logo icon" src={logo} />
         <Link
@@ -19,61 +23,29 @@ function NavbarContainer() {
           to="home"
           spy={true}
           smooth={true}
-          offset={-51}
-          duration={600}
+          offset={-50}
+          duration={300}
         >
-          ComName
+          HOME
         </Link>
       </Navbar.Brand>
-      <Nav className="nav-container ml-auto mr-4">
-        <Nav.Item bsPrefix="nav-item">
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-51}
-            duration={300}
-          >
-            About
-          </Link>
-        </Nav.Item>
-        <Nav.Item bsPrefix="nav-item">
-          <Link
-            activeClass="active"
-            to="pricing"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={300}
-          >
-            Pricing
-          </Link>
-        </Nav.Item>
-        <Nav.Item bsPrefix="nav-item">
-          <Link
-            activeClass="active"
-            to="more"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={300}
-          >
-            More
-          </Link>
-        </Nav.Item>
-        <Nav.Item bsPrefix="nav-item">
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={300}
-          >
-            Contact
-          </Link>
-        </Nav.Item>
+      <Nav className="nav-container ml-auto">
+        {navItems.map((navItem) => {
+          return (
+            <Nav.Item bsPrefix="nav-item">
+              <Link
+                activeClass="active"
+                to={navItem}
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={300}
+              >
+                {navItem.toUpperCase()}
+              </Link>
+            </Nav.Item>
+          );
+        })}
       </Nav>
       <div className="button" onClick={gotoLogin}>
         LOGIN

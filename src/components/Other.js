@@ -1,7 +1,7 @@
 import React from "react";
 
 function Other() {
-  return <div className="other" id="more"></div>;
+  return <section className="other" id="more"></section>;
 }
 
 export default Other;
