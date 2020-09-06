@@ -1,0 +1,24 @@
+.footer {
+  @include section-size;
+  height: $height/3;
+  background-image: url("../assets/section5.svg");
+  transform: translateY(-1px);
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  .footer-content {
+    margin: auto;
+    width: $size * 20;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-$size * 2.3);
+  }
+  .copyright {
+    text-align: center;
+    font-size: $size;
+    bottom: 0px;
+    color: $darkest-color;
+    span {
+      color: $primary-color;
+    }
+  }
+}

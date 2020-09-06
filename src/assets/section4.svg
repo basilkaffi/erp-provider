@@ -6,7 +6,7 @@
 	.st0{fill:url(#SVGID_1_);}
 	.st1{fill:url(#SVGID_2_);}
 </style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="683.0447" y1="-545.3178" x2="683.6586" y2="311.3805" gradientTransform="matrix(1 0 0 -1 0 768)">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="682.8937" y1="1567.9008" x2="683.7113" y2="427.0778" gradientTransform="matrix(1 0 0 1 0 -73.89)">
 	<stop  offset="0" style="stop-color:#1268FB"/>
 	<stop  offset="0.2618" style="stop-color:#8887E9"/>
 	<stop  offset="0.4042" style="stop-color:#C496E0"/>
@@ -15,10 +15,11 @@
 	<stop  offset="0.6204" style="stop-color:#5DC7EC"/>
 	<stop  offset="0.6652" style="stop-color:#4FCDEE"/>
 </linearGradient>
-<path class="st0" d="M1367,768c0-46.3,0-92.7,0-139c-2.1-10.7-28.7-135.8-136.6-177.1c-87.9-33.6-173.4,9.9-194.4,21.6
-	c-73.9,41.2-67.6,89.3-138.2,116.6c-71.5,27.6-142,3.2-157.7-2.2c-65.9-22.8-67.1-55.2-136.7-96c-25.7-15-130.5-76.4-226.2-46.6
-	c-80.8,25.2-81.7,92.6-166.3,133.9C137.4,615.2,57.5,603.9,0,587.9c0.7,27.6,1.2,55.7,1.4,84.1c0.3,32.5,0.3,64.5,0,96H1367z"/>
-<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1103.0957" y1="444.9899" x2="1103.3099" y2="743.8939" gradientTransform="matrix(1 0 0 -1 0 768)">
+<path class="st0" d="M1367,768c0-61.7,0-123.5,0-185.1c-2.1-14.3-28.7-180.9-136.6-235.9c-87.9-44.8-173.4,13.2-194.4,28.8
+	c-73.9,54.9-67.6,118.9-138.2,155.3c-71.5,36.8-142,4.3-157.7-2.9c-65.9-30.4-67.1-73.5-136.7-127.9
+	c-25.7-20-130.5-101.8-226.2-62.1c-80.8,33.6-81.7,123.3-166.3,178.3c-73.5,48-153.4,32.9-210.9,11.6c0.7,36.8,1.2,74.2,1.4,112
+	c0.3,43.3,0.3,85.9,0,127.9H1367z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1204.9114" y1="353.533" x2="1205.093" y2="100.0724" gradientTransform="matrix(1 0 0 1 0 -73.89)">
 	<stop  offset="0" style="stop-color:#1268FB"/>
 	<stop  offset="5.450700e-04" style="stop-color:#2B92F6"/>
 	<stop  offset="1.361785e-03" style="stop-color:#4FCDEE"/>
@@ -29,5 +30,5 @@
 	<stop  offset="0.9007" style="stop-color:#ADA1E3"/>
 	<stop  offset="1" style="stop-color:#C496E0"/>
 </linearGradient>
-<circle class="st1" cx="1103.2" cy="177.6" r="123"/>
+<circle class="st1" cx="1205" cy="156.3" r="104.3"/>
 </svg>

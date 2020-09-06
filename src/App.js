@@ -8,11 +8,11 @@ import {
   Switch,
   withRouter,
 } from "react-router-dom";
-import { OnePage, Login } from "./pages";
+import { OnePage, Enter } from "./pages";
 
 function App() {
   const routes = [
-    { path: "/login", name: "login", Component: Login },
+    { path: "/:enter", name: "enter", Component: Enter },
     { path: "/", name: "home", Component: OnePage },
   ];
   const AnimatedSwitch = withRouter(({ location }) => (
@@ -20,7 +20,7 @@ function App() {
       <CSSTransition
         key={location.key}
         timeout={300}
-        classNames="ease-in"
+        classNames="page-transition"
         unmountOnExit
       >
         <Switch>

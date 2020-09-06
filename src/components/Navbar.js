@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 
 function NavbarContainer(props) {
   const history = useHistory();
-  const navItems = ["about", "pricing", "more", "contact"];
+  const navItems = ["about", "pricing", "contact"];
   const gotoLogin = (e) => {
     e.preventDefault();
     history.push("/login");

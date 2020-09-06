@@ -1,5 +1,50 @@
 .contact {
   @include section-size;
-  background-image: url("../assets/section5.svg");
-  transform: translateY(-1px);
+  background-image: url("../assets/section4.svg");
+  .content-container {
+    @include content-container;
+    color: $primary-color;
+    .lead {
+      color: $third-color;
+      width: $size * 40;
+    }
+    .divider {
+      display: flex;
+      justify-content: space-evenly;
+      // width: $size * 45;
+      width: $width * 0.7;
+      margin: auto;
+      transform: translateY(-$size * 1.6);
+    }
+    .divider-content {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .map,
+      .form {
+        // width: $size * 27;
+        width: 95%;
+        margin: auto;
+        .button {
+          margin-top: $size * 1.5;
+          @include button-style;
+          border: $size * 0.15 $secondary-color solid;
+          background: $secondary-color;
+          color: white;
+          background-position: center;
+          border-radius: $size * 0.4;
+          width: 100%;
+          &:hover {
+            background-position: center;
+            border: $size * 0.15 $primary-color solid;
+            background: $primary-color;
+            color: white;
+          }
+        }
+      }
+      .form {
+        transform: translateY($size * 0.4);
+      }
+    }
+  }
 }

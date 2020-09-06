@@ -5,13 +5,13 @@
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
 </style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="238.65" y1="622.85" x2="1443.5366" y2="-582.0367" gradientTransform="matrix(1 0 0 1 0 288)">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="220.3825" y1="163.3075" x2="1425.269" y2="1368.1942" gradientTransform="matrix(1 0 0 -1 0 1055.89)">
 	<stop  offset="0" style="stop-color:#4FCDEE"/>
 	<stop  offset="0.2057" style="stop-color:#3AAAF3"/>
 	<stop  offset="0.6099" style="stop-color:#1268FB"/>
 	<stop  offset="0.8362" style="stop-color:#9089E8"/>
 	<stop  offset="0.9376" style="stop-color:#C496E0"/>
 </linearGradient>
-<path class="st0" d="M599,55c-42.5,54.6-106.1,71.2-140,80c-86.6,22.6-129.9-7.1-233-10c-51.8-1.4-129,3.6-225,38
-	c0,201.8,0,403.7,0,605.5h1365.5V0.5H627.1C621.3,18.6,613.6,36.2,599,55z"/>
+<path class="st0" d="M486.2,99.6c-95,15.6-158.7-16.6-244.1-29.2C186.7,62.2,105.1,59.8,0,90.9c0.3,225.9,0.7,451.7,1,677.6h1365.5
+	V0.5H627.1c-6,13.2-16.5,32.4-35,50.5C565.9,76.6,532,92.1,486.2,99.6z"/>
 </svg>

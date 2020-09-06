@@ -1,5 +1,49 @@
 .pricing {
   @include section-size;
+  height: $height * 1.2;
   background-image: url("../assets/section3.svg");
   transform: translateY(-2px);
+  .content-container {
+    @include content-container;
+    color: $primary-color;
+    top: 55%;
+    .lead {
+      color: $third-color;
+    }
+    .divider {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .card {
+        width: $size * 15;
+        height: fit-content;
+        margin: auto;
+        margin-top: $size * 2;
+        background: linear-gradient(white, #e2ffff);
+        text-align: center;
+        h5 {
+          font-size: $size * 1.2;
+          color: $secondary-color;
+        }
+        h6 {
+          font-size: $size;
+        }
+        li {
+          font-size: $size * 0.9;
+          text-align: left;
+          color: $darkest-color;
+        }
+        .button {
+          @include button-style;
+          background: $secondary-color;
+          border: $size * 0.2 $secondary-color solid;
+          color: white;
+          margin: auto;
+          &:hover {
+            background: $primary-color;
+            border: $size * 0.2 $primary-color solid;
+          }
+        }
+      }
+    }
+  }
 }

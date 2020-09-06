@@ -1,5 +1,19 @@
 .about {
   @include section-size;
-  background-image: url("../assets/section2.svg");
+  height: $height;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(68, 205, 207, 0.8)
+    ),
+    url("https://image.freepik.com/free-photo/low-angle-view-skyscrapers_1359-825.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   transform: translateY(-2px);
+  text-align: justify;
+  color: $darkest-color;
+  .content-container {
+    @include content-container;
+  }
 }

@@ -33,17 +33,17 @@
       height: $height - ($height * 0.14);
       .content {
         position: relative;
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
         height: fit-content;
         color: $primary-color;
-        text-align: justify;
         h2 {
           font-size: $size * 1.7;
         }
         p {
+          text-align: justify;
           margin-top: $size;
           font-size: $size;
         }
@@ -68,7 +68,7 @@
       }
     }
     .image-container > .content {
-      top: 60%;
+      top: 70%;
       left: 45%;
       width: 90%;
     }

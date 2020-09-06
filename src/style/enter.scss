@@ -1,0 +1,72 @@
+.enter {
+  @include section-size;
+  color: $primary-color;
+  background-image: url("../assets/section1.svg");
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .form-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: $size * 16;
+    padding: $size * 0.4 $size * 0.7;
+    background-color: #24223b9d;
+    border-radius: $size * 0.4;
+    h2 {
+      text-align: center;
+      color: white;
+    }
+    .form {
+      background-color: white;
+      transform: translateY($size * 0.4);
+      border-radius: $size * 0.4;
+      padding: $size * 0.7;
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: $size * 0.6;
+        .enter-btn {
+          @include button-style;
+          border: $size * 0.15 $secondary-color solid;
+          background: $secondary-color;
+          color: white;
+          background-position: center;
+          border-radius: $size * 0.4;
+          width: $size * 5;
+          &:hover {
+            background-position: center;
+            border: $size * 0.15 $primary-color solid;
+            background: $primary-color;
+            color: white;
+          }
+        }
+        .back-btn {
+          @include button-style;
+          border: $size * 0.15 $secondary-color solid;
+          background: white;
+          background-position: center;
+          border-radius: $size * 0.4;
+          width: $size * 4.5;
+          &:hover {
+            background-position: center;
+            border: $size * 0.15 $primary-color solid;
+            color: $primary-color;
+          }
+        }
+      }
+      p {
+        font-size: $size * 0.8;
+        color: $darkest-color;
+        span {
+          color: $primary-color;
+          cursor: pointer;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}

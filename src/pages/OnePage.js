@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
-import { Navbar, Home, About, Pricing, Other, Contact } from "../components";
+import { Navbar, Home, About, Pricing, Contact, Footer } from "../components";
 
 function OnePage() {
   const [visible, setVisibility] = useState(false);
@@ -28,8 +28,8 @@ function OnePage() {
       <Home />
       <About />
       <Pricing />
-      <Other />
       <Contact />
+      <Footer />
     </div>
   );
 }
