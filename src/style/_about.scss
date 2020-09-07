@@ -2,8 +2,8 @@
   @include section-size;
   height: $height;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.95),
-      rgba(68, 205, 207, 0.8)
+      rgb(255, 255, 255),
+      rgba(79, 238, 241, 0.767)
     ),
     url("https://image.freepik.com/free-photo/low-angle-view-skyscrapers_1359-825.jpg");
   background-repeat: no-repeat;
@@ -15,5 +15,11 @@
   color: $darkest-color;
   .content-container {
     @include content-container;
+  }
+}
+
+@media (min-height: $height) {
+  .about {
+    height: 100vh;
   }
 }

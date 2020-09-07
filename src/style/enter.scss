@@ -1,15 +1,23 @@
 .enter {
   @include section-size;
+  min-height: $height;
+  height: 100vh;
   color: $primary-color;
-  background-image: url("../assets/section1.svg");
+  background: linear-gradient(white, rgba(79, 238, 241, 0.938));
   display: grid;
   grid-template-columns: 1fr 1fr;
+  img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $size * 24;
+  }
   .form-container {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 50%;
     width: $size * 16;
     padding: $size * 0.4 $size * 0.7;
     background-color: #24223b9d;
@@ -67,6 +75,23 @@
           }
         }
       }
+    }
+  }
+}
+$breakpoint: 950px;
+@media (min-width: $breakpoint) {
+  .enter {
+    .divider {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media (max-width: $breakpoint) {
+  .enter {
+    height: 100vh;
+    grid-template-columns: none;
+    .logo {
+      display: none;
     }
   }
 }

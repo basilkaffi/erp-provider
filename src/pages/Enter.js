@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.svg";
 import { Form } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
@@ -11,8 +12,10 @@ function Login(props) {
 
   return (
     <div className="enter">
-      <div className="description"></div>
-      <div>
+      <div className="logo">
+        <img src={logo} alt="logo icon"></img>
+      </div>
+      <div className="right">
         <Form className="form-container">
           <h2>{enter && enter.toUpperCase()}</h2>
           <Form.Group className="form">

@@ -10,7 +10,14 @@
     width: $size * 20;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-$size * 2.3);
+    transform: translateY(-$size);
+    .icon {
+      cursor: pointer;
+      transition: ease-in-out 300ms;
+      &:hover {
+        filter: invert(0.2);
+      }
+    }
   }
   .copyright {
     text-align: center;

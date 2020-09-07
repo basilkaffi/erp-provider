@@ -1,6 +1,5 @@
 .pricing {
   @include section-size;
-  height: $height * 1.2;
   background-image: url("../assets/section3.svg");
   transform: translateY(-2px);
   .content-container {
@@ -12,9 +11,9 @@
     }
     .divider {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      // grid-template-columns: repeat(3, 1fr);
+      $size: $width/70;
       .card {
-        width: $size * 15;
         height: fit-content;
         margin: auto;
         margin-top: $size * 2;
@@ -41,6 +40,64 @@
           &:hover {
             background: $primary-color;
             border: $size * 0.2 $primary-color solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+$breakpoint: 950px;
+@media (min-width: $breakpoint) {
+  .pricing {
+    height: $height * 1.2;
+    .divider {
+      grid-template-columns: repeat(3, 1fr);
+      .card {
+        width: 24vw;
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint) {
+  .pricing {
+    height: fit-content;
+    .content-container {
+      transform: translate(-50%, 3%);
+      .section-title {
+        color: $darkest-color;
+      }
+      .lead {
+        color: $primary-color;
+      }
+      .divider {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+        .card {
+          width: $size * 15;
+          margin-top: $size;
+          h5 {
+            font-size: $size * 1.2;
+            color: $secondary-color;
+          }
+          h6 {
+            font-size: $size;
+          }
+          li {
+            font-size: $size * 0.9;
+            text-align: left;
+            color: $darkest-color;
+          }
+          .button {
+            @include button-style;
+            background: $secondary-color;
+            border: $size * 0.2 $secondary-color solid;
+            color: white;
+            margin: auto;
+            &:hover {
+              background: $primary-color;
+              border: $size * 0.2 $primary-color solid;
+            }
           }
         }
       }
