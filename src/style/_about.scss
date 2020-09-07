@@ -23,3 +23,22 @@
     height: 100vh;
   }
 }
+
+$breakpoint: 768px;
+$breakHeight: 1024px;
+@media (max-width: $breakpoint) and (min-height: $breakHeight) {
+  .about {
+    .content-container {
+      @include content-container;
+      top: 50%;
+      h2 {
+        font-size: 6vw;
+      }
+      p,
+      .lead {
+        margin-top: 2vw;
+        font-size: 4vw;
+      }
+    }
+  }
+}

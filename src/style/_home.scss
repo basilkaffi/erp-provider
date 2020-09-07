@@ -27,45 +27,10 @@
   }
   .divider {
     display: grid;
-    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     .description,
     .image-container {
       height: $height - ($height * 0.14);
-      .content {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: fit-content;
-        color: $primary-color;
-        // h2 {
-        //   font-size: $size * 1.7;
-        // }
-        // p {
-        //   text-align: justify;
-        //   margin-top: $size;
-        //   font-size: $size;
-        // }
-        // .button {
-        //   @include button-style;
-        //   margin-top: $size * 2;
-        //   color: $secondary-color;
-        //   border: $size * 0.2 $secondary-color solid;
-        //   background: linear-gradient(
-        //     to right,
-        //     white 50%,
-        //     $secondary-color 50%
-        //   );
-        //   background-size: 200% 100%;
-        //   background-position: right bottom;
-        //   color: white;
-        //   &:hover {
-        //     border: $size * 0.2 $primary-color solid;
-        //     color: $primary-color;
-        //   }
-        // }
-      }
     }
     .image-container > .content {
       top: 70%;
@@ -80,9 +45,45 @@ $breakpoint: 950px;
   .home {
     .divider {
       grid-template-columns: 1fr 1fr;
+      .content {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: fit-content;
+        color: $primary-color;
+        h2 {
+          font-size: $size * 1.7;
+        }
+        p {
+          text-align: justify;
+          margin-top: $size;
+          font-size: $size;
+        }
+        .button {
+          @include button-style;
+          margin-top: $size * 2;
+          color: $secondary-color;
+          border: $size * 0.2 $secondary-color solid;
+          background: linear-gradient(
+            to right,
+            white 50%,
+            $secondary-color 50%
+          );
+          background-size: 200% 100%;
+          background-position: right bottom;
+          color: white;
+          &:hover {
+            border: $size * 0.2 $primary-color solid;
+            color: $primary-color;
+          }
+        }
+      }
     }
   }
 }
+
 @media (max-width: $breakpoint) {
   .home {
     height: fit-content;
@@ -91,57 +92,41 @@ $breakpoint: 950px;
       .image-container {
         display: none;
       }
-    }
-  }
-}
-
-$breakpointHeight: 768px;
-@media (max-height: $breakpointHeight) {
-  h2 {
-    font-size: $size * 1.7;
-  }
-  p {
-    text-align: justify;
-    margin-top: $size;
-    font-size: $size;
-  }
-  .button {
-    @include button-style;
-    margin-top: $size * 2;
-    color: $secondary-color;
-    border: $size * 0.2 $secondary-color solid;
-    background: linear-gradient(to right, white 50%, $secondary-color 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    color: white;
-    &:hover {
-      border: $size * 0.2 $primary-color solid;
-      color: $primary-color;
-    }
-  }
-}
-
-@media (min-height: $breakpointHeight) {
-  h2 {
-    font-size: $size * 1.9;
-  }
-  p {
-    text-align: justify;
-    margin-top: $size;
-    font-size: $size * 1.2;
-  }
-  .button {
-    @include button-style;
-    margin-top: $size * 2;
-    color: $secondary-color;
-    border: $size * 0.2 $secondary-color solid;
-    background: linear-gradient(to right, white 50%, $secondary-color 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    color: white;
-    &:hover {
-      border: $size * 0.2 $primary-color solid;
-      color: $primary-color;
+      .content {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: fit-content;
+        color: $primary-color;
+        h2 {
+          font-size: 4.3vh;
+        }
+        p {
+          text-align: justify;
+          margin-top: 1.2vh;
+          font-size: 2.2vh;
+        }
+        .button {
+          @include button-style;
+          margin-top: 2vh;
+          color: $secondary-color;
+          border: 0.2vh $secondary-color solid;
+          background: linear-gradient(
+            to right,
+            white 50%,
+            $secondary-color 50%
+          );
+          background-size: 200% 100%;
+          background-position: right bottom;
+          color: white;
+          &:hover {
+            border: 0.2vh $primary-color solid;
+            color: $primary-color;
+          }
+        }
+      }
     }
   }
 }
