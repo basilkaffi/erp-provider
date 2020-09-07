@@ -29,3 +29,10 @@
     }
   }
 }
+
+$breakpoint: 950px;
+@media (max-width: $breakpoint) {
+  .footer {
+    height: $height/3.5;
+  }
+}

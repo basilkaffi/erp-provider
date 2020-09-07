@@ -7,7 +7,7 @@ function Contact() {
   const MapContainer = () => {
     const mapStyles = {
       height: "50vh",
-      width: "90%",
+      width: "95%",
       "border-radius": "1vh",
     };
     const defaultCenter = {
